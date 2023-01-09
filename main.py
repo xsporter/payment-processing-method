@@ -11,6 +11,7 @@ import klarna
 import swish
 import paypal
 import hashlib
+
 def process_payment(personal_info, payment_method, amount):
 try:
 # Check if the payment method is a cryptocurrency
@@ -45,6 +46,7 @@ elif payment_method == 'paypal':
 paypal.process_payment(personal_info, amount)
 except Exception as e:
 print(f'Error processing payment: {e}')
+
 def checkout(personal_info, amount):
 try:
 # Check if all of the personal information is valid
